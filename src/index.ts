@@ -247,6 +247,7 @@ export type * from './util/explainable.js'
 export type * from './util/streamable.js'
 export type * from './util/executable.js'
 export * from './util/log.js'
+export * from './util/query-utils.js'
 export type {
   AnyAliasedColumn,
   AnyAliasedColumnWithTable,
