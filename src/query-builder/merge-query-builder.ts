@@ -70,6 +70,10 @@ export class MergeQueryBuilder<DB, TT extends keyof DB, O>
     this.#props = freeze(props)
   }
 
+  get isMergeQueryBuilder(): true {
+    return true
+  }
+
   /**
    * This can be used to add any additional SQL to the end of the query.
    *
@@ -286,6 +290,10 @@ export class WheneableMergeQueryBuilder<
 
   constructor(props: MergeQueryBuilderProps) {
     this.#props = freeze(props)
+  }
+
+  get isMergeQueryBuilder(): true {
+    return true
   }
 
   /**
@@ -858,6 +866,10 @@ export class MatchedThenableMergeQueryBuilder<
     this.#props = freeze(props)
   }
 
+  get isMergeQueryBuilder(): true {
+    return true
+  }
+
   /**
    * Performs the `delete` action.
    *
@@ -1056,6 +1068,10 @@ export class NotMatchedThenableMergeQueryBuilder<
 
   constructor(props: MergeQueryBuilderProps) {
     this.#props = freeze(props)
+  }
+
+  get isMergeQueryBuilder(): true {
+    return true
   }
 
   /**
