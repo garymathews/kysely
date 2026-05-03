@@ -37,10 +37,6 @@
       ]
     }
   },
-  "files": [
-    "dist",
-    "outdated-typescript.d.ts"
-  ],
   "exports": {
     ".": {
       "types@<5.4": "./outdated-typescript.d.ts",
@@ -82,7 +78,8 @@
     "script:override-tsconfig-target": "node --experimental-strip-types scripts/override-tsconfig-target.mts",
     "script:remove-global-augmentations": "node --experimental-strip-types scripts/remove-global-augmentations.mts",
     "prepublishOnly": "pnpm build && pnpm test:exports",
-    "version": "pnpm script:align-versions && git add ."
+    "version": "pnpm script:align-versions && git add .",
+    "postinstall": "pnpm build"
   },
   "author": "Sami Koskimäki <sami@jakso.me>",
   "license": "MIT",
